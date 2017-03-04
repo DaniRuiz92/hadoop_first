@@ -13,12 +13,12 @@ for input_line in sys.stdin:
    if last_key == this_key:
        running_total += value
    else:
-       if last_key:
-           if sys.argv[1]<running_total:
-               print( "%s\t%d" % (last_key, running_total) )
+       if last_key & running_total > sys.argv:
+           print( "%s\t%d" % (last_key, running_total) )
        running_total = value
        last_key = this_key
  
-if last_key == this_key:
-    if sys.argv[1]<running_total:
-        print( "%s\t%d" % (last_key, running_total) )
+if last_key == this_key & running_total > sys.argv:
+    print( "%s\t%d" % (last_key, running_total) )
+
+#if sys.argv[1]<running_total:
