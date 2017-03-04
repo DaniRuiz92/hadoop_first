@@ -14,7 +14,8 @@ for input_line in sys.stdin:
        running_total += value
    else:
        if last_key:
-           print( "%s\t%d" % (last_key, running_total) )
+           if sys.argv[1]<running_total:
+               print( "%s\t%d" % (last_key, running_total) )
        running_total = value
        last_key = this_key
  
