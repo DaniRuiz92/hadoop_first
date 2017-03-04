@@ -5,7 +5,7 @@ import sys
 last_key = None
 running_total = 0
  
-for input_line in sys.stdin[0]:
+for input_line in sys.stdin:
    input_line = input_line.strip()
    this_key, value = input_line.split("\t", 1)
    value = int(value)
@@ -19,5 +19,5 @@ for input_line in sys.stdin[0]:
        last_key = this_key
  
 if last_key == this_key:
-    if sys.stdin[1]<running_total:
+    if sys.argv[1]<running_total:
         print( "%s\t%d" % (last_key, running_total) )
